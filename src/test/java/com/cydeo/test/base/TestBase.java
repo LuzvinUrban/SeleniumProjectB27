@@ -6,16 +6,22 @@ import org.testng.annotations.BeforeMethod;
 
 import java.util.concurrent.TimeUnit;
 
-public class TestBase {
-    WebDriver driver;
+// This class is the parent of all Test classes
+public abstract class TestBase {
+
+    protected WebDriver driver;
 
     @BeforeMethod
     public void setUp(){
+        driver = WebDriverFactory.getDriver("chrome");
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
-            driver = WebDriverFactory.getDriver("chrome");
-            driver.manage().window().maximize();
-            driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-            //1. Go to: https://practice.cydeo.com/web-tables
-            driver.get("https://practice.cydeo.com/web-tables");
     }
-}
+
+   // @AfterMethod
+   // public void tearDown(){
+     //   driver.quit();
+    }
+
+
