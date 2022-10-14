@@ -3,7 +3,7 @@ package com.cydeo.utilities;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
-
+//This class is only 1 time we are creating in utilities package
 public class ConfigurationReader {
 
     //1- create the object of Properties class
