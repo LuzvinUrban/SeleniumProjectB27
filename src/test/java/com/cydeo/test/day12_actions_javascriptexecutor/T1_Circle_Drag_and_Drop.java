@@ -26,12 +26,12 @@ public class T1_Circle_Drag_and_Drop {
 
       //  2. Drag and drop the small circle to bigger circle.
 actions.dragAndDrop(smallCircle,bigCircle).perform();
-//actions.clickAndHold(smallCircle)
-  //      .pause(2000)
-   //     .moveToElement(bigCircle)
-    //    .pause(2000)
-    //    .release()
-    //    .perform();
+actions.clickAndHold(smallCircle)
+       .pause(2000)
+       .moveToElement(bigCircle)
+        .pause(2000)
+        .release()
+       .perform();
 
 
 //3.Assert:
